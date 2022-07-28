@@ -19,6 +19,9 @@ class StudentsController < ApplicationController
   end
 
   def destroy
+    student = Student.find(params[:id])
+    student.dstroy
+    head :no_content
   end
 
   private
